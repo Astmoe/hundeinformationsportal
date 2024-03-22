@@ -1,0 +1,434 @@
+@charset "UTF-8";
+/*Variabler*/
+/*Mixins*/
+/*Nesting*/
+main section div a {
+  color: #fff;
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  background-color: #E9E6DD;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+}
+
+header {
+  background-color: #F6F4EF;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+header nav ul.desktop-menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header nav ul.desktop-menu li {
+  margin-left: 20px;
+}
+header nav ul.desktop-menu li:first-child {
+  margin-left: 0;
+}
+header nav ul.desktop-menu li button {
+  background-color: #F6F4EF; /* baggrundsfarve */
+  border: none; /* Fjern kantlinjer */
+  color: rgb(0, 0, 0); /* Hvid tekstfarve */
+  padding: 10px 20px; /* Lidt padding for at gøre knappen mere synlig og klikbar */
+  text-align: center; /* Centrer teksten i knappen */
+  text-decoration: none; /* Fjern understregning, hvis knappen er i et anker */
+  display: inline-block; /* Gør knappen til et inline-block element, så den tilpasser sig teksten */
+  font-size: 16px; /* Skriftstørrelse */
+  cursor: pointer; /* Gør markøren til en hånd, når der holdes over knappen */
+  border-radius: 5px; /* Afrundede kanter */
+  transition: background-color 0.3s; /* Glat overgang til baggrundsfarveændring */
+}
+header nav ul.desktop-menu li button:hover {
+  background-color: #E9E6DD; /* Mørkere baggrundsfarve ved hover */
+}
+
+main {
+  padding: 20px;
+  flex: 1;
+}
+
+footer {
+  background-color: #F6F4EF;
+  padding: 20px 0;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo img {
+    width: 120px;
+  }
+  .desktop-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .desktop-menu li {
+    margin-left: 20px;
+  }
+  .desktop-menu li:first-child {
+    margin-left: 0;
+  }
+  .desktop-menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo img {
+    width: 300px;
+  }
+  .desktop-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .desktop-menu li {
+    margin-left: 20px;
+  }
+  .desktop-menu li:first-child {
+    margin-left: 0;
+  }
+  .desktop-menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+}
+/* Tilføjelse: Stil for hero-billede */
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 769px) {
+  .hero-image {
+    max-width: 100%;
+  }
+}
+
+/* Tilføjelse: Stil for hero-container */
+.hero-container {
+  position: relative;
+}
+
+/* Tilføjelse: Stil for overlay */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 80%;
+  margin-top: -60%;
+}
+
+.overlay h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 18px;
+}
+
+/* Tilpasninger til mobilskærme */
+@media only screen and (max-width: 768px) {
+  .overlay {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    margin-top: -52%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .overlay {
+    margin-top: -120px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .overlay {
+    margin-top: -900px;
+  }
+}
+.welcome-text {
+  margin-bottom: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+@media only screen and (max-width: 768px) {
+  .welcome-text {
+    margin-top: 0px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .welcome-text {
+    margin-top: 0px;
+  }
+}
+/* Tilføjelse: Stil for tekstfelt */
+.text-field {
+  background-color: #E9E6DD;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+@media only screen and (min-width: 769px) {
+  .text-field {
+    display: inline-block;
+    width: calc(50% - 20px);
+    margin-left: 20px;
+    vertical-align: top;
+    margin-top: -100px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .text-field {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* Tilføjelse: Stil for tekstfelt */
+.text-field2 {
+  background-color: #E9E6DD;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+@media only screen and (min-width: 769px) {
+  .text-field2 {
+    display: inline-block;
+    width: calc(50% - 20px);
+    margin-left: 128%;
+    vertical-align: top;
+    margin-top: -100px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .text-field2 {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+/* Tilføjelse: Stil for hunderacer-sektion */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+section .breed-card {
+  width: calc(50% - 10px);
+  margin-bottom: 0px;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  section .breed-card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+section .breed-card h2 {
+  margin-bottom: 5px;
+}
+section .breed-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 0;
+}
+@media only screen and (min-width: 769px) {
+  section .breed-card img {
+    margin-left: 102%;
+    margin-right: 0;
+    margin-top: 75px;
+  }
+}
+section .breed-card2 {
+  width: calc(50% - 10px);
+  margin-bottom: 0px;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  section .breed-card2 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+section .breed-card2 h2 {
+  margin-bottom: 5px;
+}
+section .breed-card2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media only screen and (min-width: 769px) {
+  section .breed-card2 img {
+    margin-top: 0;
+  }
+}
+
+.breed-card3 {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .breed-card3 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.breed-card3 h2 {
+  margin-bottom: 5px;
+}
+.breed-card3 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 0;
+}
+@media only screen and (min-width: 769px) {
+  .breed-card3 img {
+    margin-left: 102%;
+    margin-right: 0;
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+}
+
+.text-field1-1 {
+  background-color: #E9E6DD;
+  padding: 10px;
+  margin-top: 0; /* Juster denne værdi efter behov */
+  text-align: center;
+}
+@media only screen and (min-width: 769px) {
+  .text-field1-1 {
+    display: inline-block;
+    width: auto; /* Juster denne værdi efter behov */
+    margin-left: 10px; /* Juster denne værdi efter behov */
+    vertical-align: top;
+    margin-top: -425px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .text-field1-1 {
+    width: 100%;
+    margin-top: 10px; /* Juster denne værdi efter behov */
+  }
+}
+
+.text-field1-2 {
+  background-color: #E9E6DD;
+  padding: 10px;
+  margin-top: 0; /* Juster denne værdi efter behov */
+  text-align: center;
+}
+@media only screen and (min-width: 769px) {
+  .text-field1-2 {
+    display: inline-block;
+    width: 100%; /* Juster denne værdi efter behov */
+    margin-left: 105%; /* Juster denne værdi efter behov */
+    vertical-align: top;
+    margin-top: -375px;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .text-field1-2 {
+    width: 100%;
+    margin-top: 10px; /* Juster denne værdi efter behov */
+  }
+}
+
+.text-field1-3 {
+  background-color: #E9E6DD;
+  padding: 10px;
+  margin-top: 0; /* Juster denne værdi efter behov */
+  text-align: center;
+}
+@media only screen and (min-width: 769px) {
+  .text-field1-3 {
+    display: inline-block;
+    width: auto; /* Juster denne værdi efter behov */
+    margin-left: 10px; /* Juster denne værdi efter behov */
+    vertical-align: top;
+    margin-top: -500px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .text-field1-3 {
+    width: 100%;
+    margin-top: 10px; /* Juster denne værdi efter behov */
+    margin-bottom: 50px;
+  }
+}
+
+section {
+  margin-bottom: 20px;
+}
+section h2 {
+  margin-bottom: 10px;
+}
+section p {
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 769px) {
+  section p {
+    margin-bottom: 100px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  section p {
+    margin-bottom: 50px;
+  }
+}/*# sourceMappingURL=tipsogtricks.css.map */
